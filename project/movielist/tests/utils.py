@@ -2,6 +2,7 @@ from random import sample, randint, choice
 from faker import Faker
 
 from movielist.models import Person, Movie
+from showtimes.models import Cinema, Screening
 
 
 faker = Faker("pl_PL")
