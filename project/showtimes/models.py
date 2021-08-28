@@ -9,7 +9,7 @@ from movielist.models import Movie
 class Cinema(models.Model):
     name = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
-    movies = models.ManyToManyField(Movie)
+    movies = models.ManyToManyField(Movie, through="Screening")
 
     def __str__(self):
         return f'{self.name} in {self.city}'
